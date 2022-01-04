@@ -1,0 +1,5 @@
+com\sklep\oligarcha\OligarchaApplication.class
+com\sklep\oligarcha\entities\Jacht.class
+com\sklep\oligarcha\entities\RezerwacjaFormularz.class
+com\sklep\oligarcha\controllers\ShopController.class
+com\sklep\oligarcha\repositories\JachtRepository.class
