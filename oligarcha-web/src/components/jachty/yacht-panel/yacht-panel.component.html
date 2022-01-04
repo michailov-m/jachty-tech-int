@@ -1,0 +1,15 @@
+<mat-card class="card">
+        <mat-card-header >
+          <mat-card-title>{{yacht.nazwa}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="assets/images/y{{yacht.id}}.jpg" alt="Jacht">
+        <mat-card-content>
+          <p>
+            Opis
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="book-button" mat-button (click)="openDialog()">Rezerwuj</button>
+        </mat-card-actions>
+      </mat-card>
+

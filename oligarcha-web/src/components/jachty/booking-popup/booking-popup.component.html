@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Rezerwacja jachtu</h1>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()" class="booking-form">
+  <mat-form-field appearance="fill">
+    <input class="form-field" formControlName="dataOd" matInput [matDatepicker]="picker_data_od">
+    <mat-datepicker-toggle matSuffix [for]="picker_data_od"></mat-datepicker-toggle>
+    <mat-datepicker #picker_data_od></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <input class="form-field" formControlName="dataDo" matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <input class="form-field" formControlName="imie" matInput placeholder="Imię">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <input class="form-field" formControlName="nazwisko" matInput placeholder="Nazwisko">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <input class="form-field" formControlName="email" matInput placeholder="Email">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <input class="form-field" formControlName="nrtelefonu" matInput placeholder="Nr telefonu">
+    </mat-form-field>
+    <div mat-dialog-actions>
+      <button type="submit" mat-button>Rezerwuj</button>
+    </div>
+    <p *ngIf="notValid">Wypełnij wszystkie dane!</p>
+  </form>
+</mat-dialog-content>
